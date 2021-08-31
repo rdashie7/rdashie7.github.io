@@ -1,0 +1,132 @@
+.popup
+    display: none
+    height: 100vh
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: fixed
+    background-color: rgba(0, 0, 0, 0.9)
+    padding: 20px 50px
+    z-index: 10000
+    cursor: pointer
+    &__window
+        position: relative
+        max-width: 600px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background-color: #fff
+        padding: 20px
+        cursor: default
+        border-radius: 20px
+    &__header
+        margin-bottom: 20px
+        position: relative
+    &__title
+        font-family: "Poppins Bold"
+        font-size: 2.5rem
+        // color: $dark-blue
+    &__close-btn
+        font-size: 3rem
+        position: absolute
+        right: 5px
+        top: 50%
+        transform: translate(0, -50%)
+        cursor: pointer
+    &.active
+        display: block
+    &.video-popup
+        .popup__window
+            display: inline-block
+            max-width: none
+            background-color: transparent
+            padding: 0
+            border-radius: 0
+            iframe
+                display: block
+        .video-popup__close-btn
+            position: absolute
+            width: 3px
+            height: 30px
+            background-color: #fff
+            right: -25px
+            top: 0
+            transform: rotate(45deg)
+            cursor: pointer
+            &::after
+                content: ''
+                display: block
+                width: 3px
+                height: 30px
+                background-color: #fff
+                transform: rotate(90deg)
+
+.order-form
+    &__field
+        margin-bottom: 10px
+    &__label
+        font-size: 1.6rem
+        // color: $grey
+    &__input, &__textarea
+        display: block
+        // border: 1px solid $grey
+        border-radius: 10px
+        padding: 10px
+        width: 100%
+    &__textarea
+        resize: none
+    &__confirm-btn
+        margin-top: 10px
+
+
+@media (max-width: 991px)
+    .popup
+        &.video-popup
+            .popup__window
+                iframe
+                    width: 560px
+                    height: 315px
+
+@media (max-width: 768px)
+    .popup
+        &__window
+            width: 100%
+        &.video-popup
+            .popup__window
+                iframe
+                    width: 100%
+
+@media (max-width: 528px)
+    .popup
+        &.video-popup
+            .popup__window
+                iframe
+                    height: 240px
+
+@media (max-width: 428px)
+    .popup
+        &.video-popup
+            .popup__window
+                iframe
+                    height: 190px
+
+@media (max-width: 410px)
+    .popup
+        padding: 40px
+        &.video-popup
+            .popup__window
+                iframe
+                    height: 190px
+            .video-popup__close-btn
+                right: -20px
+                height: 25px
+                &::after
+                    height: 25px
+
+@media (max-width: 375px)
+    .popup
+        &.video-popup
+            .popup__window
+                iframe
+                    height: 170px

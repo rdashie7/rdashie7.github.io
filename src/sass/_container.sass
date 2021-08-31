@@ -1,0 +1,46 @@
+.container
+    margin: 0 auto
+    &.xl
+        max-width: 1590px
+    &.x
+        max-width: 1280px
+    &.l
+        max-width: 1170px
+
+
+@media (max-width: 1650px)
+    .container
+        &.xl
+            max-width: 1400px
+
+@media (max-width: 1450px)
+    .container
+        &.xl
+            max-width: 1300px
+
+@media (max-width: 1368px)
+    .container
+        &.xl, &.x, &.l
+            max-width: 1120px
+
+@media (max-width: 1199px)
+    .container
+        &.xl, &.x, &.l
+            max-width: 960px
+
+@media (max-width: 991px)
+    .container
+        &.xl, &.x, &.l
+            max-width: 720px
+
+@media (max-width: 768px)
+    .container
+        &.xl, &.x, &.l
+            max-width: 540px
+
+@media (max-width: 575px)
+    .container
+        &.xl, &.x, &.l
+            max-width: 100%
+            margin: 0
+            padding: 0 15px
